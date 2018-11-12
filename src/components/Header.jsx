@@ -6,8 +6,7 @@ import {
 
 import Brand from './Brand';
 
-import './Header.scss';
-
+import './Header.css';
 const Header = () => {
   return (
     <Router>

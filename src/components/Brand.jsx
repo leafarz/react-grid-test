@@ -2,7 +2,7 @@ import React from 'react'
 
 import brand from './../assets/brand-icon.png';
 
-import './Brand.scss';
+import './Brand.css';
 
 const Brand = () => {
   return (
