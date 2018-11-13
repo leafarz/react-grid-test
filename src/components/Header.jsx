@@ -15,6 +15,8 @@ const Header = () => {
 
   const HeaderContainer = styled.header`
     background-image: linear-gradient(${g.BGColor1}, rgb(10, 10, 10));
+    font-weight: 600;
+    
     &::after{
       content: '';
       display: table;

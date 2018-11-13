@@ -1,8 +1,15 @@
+// libraries
 import React from 'react';
 import styled from 'styled-components';
 
+// styled elements
 import Grid from './../elements/Grid';
 import g from './../js/global';
+
+// textures
+import icn_fb from './../assets/textures/webicon-facebook-s.png';
+import icn_twitter from './../assets/textures/webicon-twitter-s.png';
+import icn_ig from './../assets/textures/webicon-instagram-s.png';
 
 const Footer = () => {
   const SFooter = styled.footer`
@@ -16,6 +23,7 @@ const Footer = () => {
     text-decoration: none;
   `;
   const LI = styled.li`
+    padding: 5px 0;
     a {
       text-decoration: none;
       color: white;
@@ -46,9 +54,9 @@ const Footer = () => {
         <GridItem centered>
           <UL>
             <h1>Social</h1>
-            <LI><a href='#facebook'>Facebook</a></LI>
-            <LI><a href='#twitter'>Twitter</a></LI>
-            <LI><a href='#instagram'>Instagram</a></LI>
+            <LI><a href='#facebook'><img src={icn_fb} alt=""/> Facebook</a></LI>
+            <LI><a href='#twitter'><img src={icn_twitter} alt=""/> Twitter</a></LI>
+            <LI><a href='#instagram'><img src={icn_ig} alt=""/> Instagram</a></LI>
           </UL>
         </GridItem>
         <GridItem centered>

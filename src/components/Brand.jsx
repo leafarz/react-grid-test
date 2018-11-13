@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // icons
-import icn_brand from './../assets/brand-icon.png';
+import icn_brand from './../assets/textures/brand-icon.png';
 
 const Brand = () => {
   const SBrand = styled(Link)`
