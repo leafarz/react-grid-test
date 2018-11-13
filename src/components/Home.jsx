@@ -10,6 +10,9 @@ import g from './../js/global';
 import img_headline from './../assets/textures/games01.jpg';
 import img_pic1 from './../assets/textures/games02.jpg';
 import img_pic2 from './../assets/textures/games03.jpg';
+import icn_sword from './../assets/textures/sword.png';
+import icn_target from './../assets/textures/target.png';
+import icn_shield from './../assets/textures/shield.png';
 
 const Home = () => {
   const ImageContainer = styled.div`
@@ -35,15 +38,39 @@ const Home = () => {
   const GridContainerContainer = styled.div`
     background-color: ${g.BGColor2};
   `;
+
   const GridContainer = styled(Grid.Container)`
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
   `;
-  const GridImg = styled.img`
-    width: 100%;
-  `;
-  const GridItem = styled(Grid.Item)`
+
+  const GridItem1 = styled(Grid.Item)`
     color: ${g.BodyFColor};
+    h2 {
+      position: relative;
+      top: 40%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
+  `;
+
+  const GridItem2 = styled(Grid.Item)`
+    color: ${g.BodyFColor};
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    text-align: center;
+
+    img {
+      width: 100px;
+    }
+    h1 {
+      padding: 10px;
+      font-weight: 400;
+    }
   `;
   return (
     <body>
@@ -52,20 +79,59 @@ const Home = () => {
           <HeadlineImage src={img_headline} alt="" />
         </ImageContainer>
         <HeadlineText>
-          <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor ullam corporis fugiat.</h1>
+          <h1>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor ullam corporis fugiat.
+          </h1>
         </HeadlineText>
       </div>
 
+      {/* ======================================== */}
+
       <GridContainerContainer>
         <GridContainer columns={2} gap={20}>
-          <GridItem>
-            <GridImg src={img_pic1} alt="" />
-          </GridItem>
-          <GridItem>asdf</GridItem>
-          <GridItem>asdf</GridItem>
-          <GridItem>
-            <GridImg src={img_pic2} alt="" />
-          </GridItem>
+          <GridItem1>
+            <img src={img_pic1} alt="" />
+          </GridItem1>
+          <GridItem1>
+            <h2>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </h2>
+          </GridItem1>
+          <GridItem1>
+            <h2>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui non sapiente distinctio? Est, officia accusamus!
+            </h2>
+          </GridItem1>
+          <GridItem1>
+            <img src={img_pic2} alt="" />
+          </GridItem1>
+        </GridContainer>
+      </GridContainerContainer>
+
+      {/* ======================================== */}
+
+      <GridContainerContainer>
+        <GridContainer columns={3} gap={20} padding={50}>
+          <GridItem2>
+            <img src={icn_sword} alt="" />
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. culpa ex ipsum deserunt tempore dolor illum, alias
+          veritatis dolore ea, optio minima perferendis error voluptatum repellat explicabo cupiditate officia
+        consequuntur.</h1>
+          </GridItem2>
+          <GridItem2>
+            <img src={icn_target} alt="" />
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis recusandae itaque illum laboriosam ipsam
+        architecto!</h1>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae recusandae commodi?</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, veritatis?</h1>
+          </GridItem2>
+
+          <GridItem2>
+            <img src={icn_shield} alt="" />
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente, nesciunt doloremque in
+        voluptate quisquam totam magni, ad dolor, architecto quibusdam cum similique?</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptate?</h1>
+          </GridItem2>
         </GridContainer>
       </GridContainerContainer>
     </body>
