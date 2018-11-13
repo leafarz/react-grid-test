@@ -7,15 +7,14 @@ import styled from 'styled-components';
 import Brand from './Brand';
 
 // styled elements
+import g from './../js/global';
 import List from '../elements/List';
 
 const Header = () => {
   // + styles
-  const MARGIN = 100;
-  const BGColor = 'rgb(46, 46, 46)';
 
   const HeaderContainer = styled.header`
-    background-image: linear-gradient(${BGColor}, rgb(10, 10, 10));
+    background-image: linear-gradient(${g.BGColor1}, rgb(10, 10, 10));
     &::after{
       content: '';
       display: table;
@@ -23,7 +22,7 @@ const Header = () => {
     }
   `;
   const NavContainer = styled.nav`
-    margin: 0 ${MARGIN}px;
+    margin: 0 ${g.Margin}px;
     color: white;
   `;
   const BrandContainer = styled.div`
