@@ -1,30 +1,73 @@
+// libraries
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
+// components
 import Brand from './Brand';
 
-import './Header.css';
+// styled elements
+import List from '../elements/List';
+
 const Header = () => {
+  // + styles
+  const MARGIN = 100;
+  const BGColor = 'rgb(46, 46, 46)';
+
+  const HeaderContainer = styled.header`
+    background-image: linear-gradient(${BGColor}, rgb(10, 10, 10));
+    &::after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  `;
+  const NavContainer = styled.nav`
+    margin: 0 ${MARGIN}px;
+    color: white;
+  `;
+  const BrandContainer = styled.div`
+    float: left;
+  `;
+  const RightNav = styled.nav`
+    float: right;
+  `;
+
+  const SLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+
+    a {
+      text-decoration:none;
+      color: white;
+    }
+
+    &:hover {
+      transition: 0.3s;
+      background-color: rgb(77, 77, 77);
+    }
+  `;
+  // - styles
+
   return (
-    <Router>
-      <header>
-        <Brand />
-        
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Games</li>
-            <li>News</li>
-            <li>Careers</li>
-            <li>Contact</li>
-            <li>About</li>
-          </ul>
-        </nav>
-      </header>
-    </Router>
+    <HeaderContainer>
+      <NavContainer>
+        <BrandContainer>
+          <Brand />
+        </BrandContainer>
+
+        <RightNav>
+          <List.ul>
+            <SLink to='/'><List.li>Home</List.li></SLink>
+            <SLink to='/games'><List.li>Games</List.li></SLink>
+            <SLink to='/news'><List.li>News</List.li></SLink>
+            <SLink to='/careers'><List.li>Careers</List.li></SLink>
+            <SLink to='/contact'><List.li>Contact</List.li></SLink>
+            <SLink to='/about'><List.li>About</List.li></SLink>
+          </List.ul>
+        </RightNav>
+      </NavContainer>
+    </HeaderContainer>
   )
 }
 

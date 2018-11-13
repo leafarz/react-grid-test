@@ -1,15 +1,25 @@
+// libraries
 import React from 'react'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import brand from './../assets/brand-icon.png';
-
-import './Brand.css';
+// icons
+import icn_brand from './../assets/brand-icon.png';
 
 const Brand = () => {
+  const SBrand = styled(Link)`
+    display: flex;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+  `;
+
   return (
-    <div>
-      <img src={brand} alt=""/>
+    <SBrand to='/'>
+      <img src={icn_brand} alt="" />
       GG
-    </div>
+    </SBrand>
+
   )
 }
 
