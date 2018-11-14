@@ -8,8 +8,9 @@ import g from './../js/global';
 
 // textures
 import img_headline from './../assets/textures/games01.jpeg';
-import img_pic1 from './../assets/textures/games02.jpeg';
-import img_pic2 from './../assets/textures/games03.jpeg';
+import img_pic2 from './../assets/textures/games02.jpeg';
+import img_pic3 from './../assets/textures/games03.jpeg';
+import img_pic4 from './../assets/textures/games04.jpeg';
 import icn_sword from './../assets/textures/sword.png';
 import icn_target from './../assets/textures/target.png';
 import icn_shield from './../assets/textures/shield.png';
@@ -38,6 +39,19 @@ const Home = () => {
   const GridContainerContainer = styled.div`
     background-color: ${g.BGColor2};
   `;
+
+  const GridContainerContainer2 = styled.div`
+    position: relative;
+    overflow: hidden;
+  `;
+
+const BGImage = styled.div`
+  background-image: url(${img_pic4});
+  width: 100%;;
+  height: 100%;;
+  position: absolute;
+  z-index: -1;
+`;
 
   const GridContainer = styled(Grid.Container)`
     width: 80%;
@@ -90,7 +104,7 @@ const Home = () => {
       <GridContainerContainer>
         <GridContainer columns={2} gap={20}>
           <GridItem1>
-            <img src={img_pic1} alt="" />
+            <img src={img_pic2} alt="" />
           </GridItem1>
           <GridItem1>
             <h2>
@@ -103,14 +117,15 @@ const Home = () => {
             </h2>
           </GridItem1>
           <GridItem1>
-            <img src={img_pic2} alt="" />
+            <img src={img_pic3} alt="" />
           </GridItem1>
         </GridContainer>
       </GridContainerContainer>
 
       {/* ======================================== */}
 
-      <GridContainerContainer>
+      <GridContainerContainer2>
+        <BGImage></BGImage>
         <GridContainer columns={3} gap={20} padding={50}>
           <GridItem2>
             <img src={icn_sword} alt="" />
@@ -133,7 +148,7 @@ const Home = () => {
             <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptate?</h1>
           </GridItem2>
         </GridContainer>
-      </GridContainerContainer>
+      </GridContainerContainer2>
     </body>
   )
 }
