@@ -7,9 +7,9 @@ import Grid from './../elements/Grid';
 import g from './../js/global';
 
 // textures
-import img_headline from './../assets/textures/games01.jpg';
-import img_pic1 from './../assets/textures/games02.jpg';
-import img_pic2 from './../assets/textures/games03.jpg';
+import img_headline from './../assets/textures/games01.jpeg';
+import img_pic1 from './../assets/textures/games02.jpeg';
+import img_pic2 from './../assets/textures/games03.jpeg';
 import icn_sword from './../assets/textures/sword.png';
 import icn_target from './../assets/textures/target.png';
 import icn_shield from './../assets/textures/shield.png';
