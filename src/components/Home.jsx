@@ -38,6 +38,7 @@ const Home = () => {
   `;
   const GridContainerContainer = styled.div`
     background-color: ${g.BGColor2};
+    
   `;
 
   const GridContainerContainer2 = styled.div`
@@ -45,17 +46,28 @@ const Home = () => {
     overflow: hidden;
   `;
 
-const BGImage = styled.div`
-  background-image: url(${img_pic4});
-  width: 100%;;
-  height: 100%;;
-  position: absolute;
-  z-index: -1;
-`;
+  const BGImage = styled.div`
+    background-image: url(${img_pic4});
+    width: 100%;;
+    height: 100%;;
+    position: absolute;
+    z-index: -1;
+  `;
 
   const GridContainer = styled(Grid.Container)`
     width: 80%;
     margin: auto;
+
+    @media ${g.Sizes.M} {
+      width: 100%;
+    }
+
+    @media ${g.Sizes.S} {
+      width: 100%;
+      display: block;
+      padding: 0px;
+    }
+
   `;
 
   const GridItem1 = styled(Grid.Item)`
@@ -68,6 +80,14 @@ const BGImage = styled.div`
     }
     img {
       width: 100%;
+    }
+
+    @media ${g.Sizes.S} {
+      h2 {
+        position: unset;
+        top: unset;
+        transform: unset;
+      }
     }
   `;
 
@@ -84,6 +104,18 @@ const BGImage = styled.div`
     h1 {
       padding: 10px;
       font-weight: 400;
+    }
+
+    @media ${g.Sizes.M} {
+      padding: 20px;
+    }
+
+    @media ${g.Sizes.S} {
+      border-radius: 0;
+      
+      &:nth-child(odd) {
+        background-color: rgba(30, 30, 30, 0.9);
+      }
     }
   `;
   return (

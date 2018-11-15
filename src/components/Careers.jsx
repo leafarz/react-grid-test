@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Careers extends Component {
-  render() {
-    return (
-      <div>
-        Careers
-      </div>
-    )
-  }
+import styled from 'styled-components';
+
+import g from './../js/global';
+
+const Careers = () => {
+  const Body = styled.body`
+    height: 75vh;
+    background-color: ${g.BGColor2};
+    color: white;
+  `;
+  return (
+    <Body>
+      Careers
+    </Body>
+  )
 }
+
+export default Careers;

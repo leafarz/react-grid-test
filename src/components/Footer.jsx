@@ -12,6 +12,13 @@ import icn_twitter from './../assets/textures/webicon-twitter-s.png';
 import icn_ig from './../assets/textures/webicon-instagram-s.png';
 
 const Footer = () => {
+  const GridContainer = styled(Grid.Container)`
+    @media ${g.Sizes.S} {
+      display: block;
+      padding: 0;
+      grid-gap: 0;
+    }
+  `;
   const SFooter = styled.footer`
     background-color: ${g.BGColor2};
     color: white;
@@ -37,11 +44,23 @@ const Footer = () => {
     h1 {
       padding: 20px;
     }
+    
+    @media ${g.Sizes.S} {
+      text-align: left;
+
+      h1{
+        padding: 0;
+      }
+      
+      &:nth-child(even) {
+        background-color: rgba(30, 30, 30, 0.9);
+      }
+    }
   `;
 
   return (
     <SFooter>
-      <Grid.Container columns={3} padding={20} gap={20}>
+      <GridContainer columns={3} padding={20} gap={20}>
         <GridItem centered>
           <h1>Navigation</h1>
           <UL>
@@ -69,7 +88,7 @@ const Footer = () => {
             <LI><a href='#about'>About</a></LI>
           </UL>
         </GridItem>
-      </Grid.Container>
+      </GridContainer>
     </SFooter>
   )
 }

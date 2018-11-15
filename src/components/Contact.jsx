@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Contact extends Component {
-  render() {
-    return (
-      <div>
-        Contact
-      </div>
-    )
-  }
+import styled from 'styled-components';
+
+import g from './../js/global';
+
+const Contact = () => {
+  const Body = styled.body`
+    height: 75vh;
+    background-color: ${g.BGColor2};
+    color: white;
+  `;
+  return (
+    <Body>
+      Contact
+    </Body>
+  )
 }
+
+export default Contact;

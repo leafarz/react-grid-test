@@ -12,7 +12,6 @@ import List from '../elements/List';
 
 const Header = () => {
   // + styles
-
   const HeaderContainer = styled.header`
     background-image: linear-gradient(${g.BGColor1}, rgb(10, 10, 10));
     font-weight: 600;
@@ -23,15 +22,39 @@ const Header = () => {
       clear: both;
     }
   `;
+
   const NavContainer = styled.nav`
-    margin: 0 ${g.Margin}px;
     color: white;
+    margin: 0 ${g.Margin[0]}px;
+
+    @media ${g.Sizes.M} {
+      margin: 0 ${g.Margin[1]}px;
+    }
   `;
   const BrandContainer = styled.div`
     float: left;
+
+    @media ${g.Sizes.S} {
+      float: none;
+      text-align: center;
+
+      a {
+        justify-content: center;
+      }
+    }
   `;
   const RightNav = styled.nav`
     float: right;
+
+    @media ${g.Sizes.S} {
+      float: none;
+      text-align: center;
+
+      ul {
+        display: block;
+      }
+    }
+    
   `;
 
   const SLink = styled(Link)`
