@@ -1,3 +1,6 @@
+# Grid-Test
+![Image](https://github.com/leafarz/resources/blob/master/grid-test_01.jpg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
